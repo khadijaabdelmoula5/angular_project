@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #241f1f; /* Couleur de fond de la page */
+  }
+  
+  h1 {
+    text-align: center;
+    color: white;
+  }
+  
+  table {
+    width: 100%;
+    margin: 20px 0;
+    background-color: rgb(41, 39, 39);
+    border-collapse: collapse;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mat-elevation-z8 {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .mat-header-cell, .mat-cell {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .mat-header-cell {
+    background-color: #3f51b5;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .mat-row:hover {
+    background-color: #f1f1f1;
+  }
+  
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover .mat-icon {
+    color: #964580; /* Couleur du bouton de suppression au survol */
+  }
+  
+  .mat-icon {
+    color: #ea0e9a;
+    font-size: 24px;
+    vertical-align: middle;
+  }
+  

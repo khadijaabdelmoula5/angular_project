@@ -1,0 +1,49 @@
+<mat-sidenav-container>
+  <!-- The side nav -->
+  <mat-sidenav #drawer fixedInViewport="true" mode="over" opened="false" style="width: 230px;">
+    <mat-toolbar color="primary" fxLayout fxLayoutGap="16px">
+      <mat-icon>business</mat-icon>
+      <span> EspacePro </span>
+    </mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/dashboard"><mat-icon>settings</mat-icon><span> Dashboard</span></a>
+      <a mat-list-item routerLink="/client"><mat-icon>supervised_user_circle</mat-icon><span> Clients</span></a>
+      <a mat-list-item routerLink="/salle"><mat-icon>meeting_room</mat-icon><span> Salle de Conference</span></a>
+      <a mat-list-item routerLink="/reservation"><mat-icon>events</mat-icon><span> Reservation</span></a>
+      <a mat-list-item routerLink="/boite-reception"><mat-icon>email</mat-icon><span> Messagerie</span></a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <!-- EO: Side nav-->
+
+  <!-- Side nav content-->
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <div fxFlex fxLayout="row" fxLayoutAlign="start center">
+        <button type="button" aria-label="Toggle sidenav" class="toolbar-button" *ngIf="(authService.isLoggedIn$ | async)"
+                mat-icon-button (click)="drawer.toggle()">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <button mat-icon-button color="white" aria-label="Example icon button with a home icon" routerLink="/">
+          <mat-icon>home</mat-icon>
+        </button>
+        <button mat-icon-button color="white" aria-label="Example icon button with an email icon" routerLink="/contact">
+          <mat-icon>email</mat-icon>
+        </button>
+      </div>
+      <div fxFlex></div>
+      <div fxFlex fxLayout="row" fxLayoutAlign="end center">
+        <button mat-icon-button color="white" aria-label="Example icon button with a login icon" routerLink="/login">
+          <mat-icon>account_circle</mat-icon>
+        </button>
+        <button mat-icon-button color="white" aria-label="Example icon button with a logout icon" (click)="logout()" *ngIf="(authService.isLoggedIn$ | async)">
+          <mat-icon>logout</mat-icon>
+        </button>
+      </div>
+    </mat-toolbar>
+
+    <div class="content mt-80 mx-16">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+  <!-- EO: Side nav content-->
+</mat-sidenav-container>

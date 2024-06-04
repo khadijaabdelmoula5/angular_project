@@ -1,0 +1,38 @@
+body, html {
+	height: 100%;
+	margin: 0;
+	font-family: Arial, sans-serif; /* Vous pouvez définir votre police ici */
+}
+
+.login-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-image: url('/assets/Images/1.jpg');
+	background-size: cover; /* Pour que l'image couvre toute la zone */
+	background-position: center; /* Pour centrer l'image */
+	background-repeat: no-repeat; /* Pour éviter la répétition de l'image */
+	background-color: #1f1b1e; /* Couleur de fond de secours */
+}
+
+mat-card {
+	width: 400px;
+	padding: 20px;
+	background: #1f1b1e; /* Pour donner un fond semi-transparent à la carte */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Pour ajouter une ombre portée */
+	border-radius: 10px; /* Optionnel: pour arrondir les coins de la carte */
+	text-align: center;
+}
+
+.login-form {
+	display: flex;
+	flex-direction: column;
+}
+
+.login-button {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 20px;
+}
+

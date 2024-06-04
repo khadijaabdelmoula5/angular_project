@@ -1,0 +1,58 @@
+<br><br>
+<div fxLayout="row" fxLayoutAlign="center stretch"  >
+    <mat-card class="col1">
+        <mat-card-header>
+            <div fxLayout="column" fxLayoutAlign="space-between center" >
+  
+          <mat-card-title>Salles</mat-card-title>
+          <mat-card-content>{{nb_Salles}}</mat-card-content>
+          </div>
+        </mat-card-header>
+    </mat-card>
+    <mat-card class="col2">
+        <mat-card-header>
+            <div fxLayout="column" fxLayoutAlign="space-between center" >
+  
+          <mat-card-title>Clients</mat-card-title>
+          <mat-card-content>{{nb_clients}}</mat-card-content>
+          </div>
+        </mat-card-header>
+    </mat-card>
+    <mat-card class="col3">
+        <mat-card-header>
+            <div fxLayout="column" fxLayoutAlign="space-between center" >
+  
+          <mat-card-title>Reservations</mat-card-title>
+          <mat-card-content>{{nb_reservation}}</mat-card-content>
+          </div>
+        </mat-card-header>
+    </mat-card>
+  
+   </div>
+   <div fxLayout="row" fxLayoutAlign="space-evenly stretch" class="mgCar">
+   
+  
+      <div class="chart-wrapper">
+        <canvas baseChart
+                [type]="'pie'"
+          [datasets]="chartDatapie"
+          [labels]="chartLabelspie"
+          >
+        </canvas>
+      </div>
+      <div class="canvas">
+        <canvas baseChart
+         [type]="'bar'" 
+         [datasets]="chartDatabar"
+         [labels]="chartLabelsbar">
+        </canvas>
+      </div>  
+      <div class="chart-wrapper">
+        <canvas baseChart class=" tailLine"
+                [type]="'line'"
+          [datasets]="chartData"
+          [labels]="chartLabels"
+          >
+        </canvas>
+      </div>
+  </div><br><br><br>

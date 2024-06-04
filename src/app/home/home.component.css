@@ -1,0 +1,85 @@
+.example-card {
+    max-width: 350px;
+  }
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+  }
+  
+  .example-card {
+    width: 300px; 
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+  .h1{
+    color:pink;
+    text-align: center;
+  }
+  .h2{
+    
+    text-align: center;
+  }
+  .p{
+  
+    text-align: center;
+    font-size: 1.1rem; /* Taille de la police */
+  color: white; /* Couleur du texte */
+  margin-top: 10px;
+  }
+  /* Styles pour le footer */
+  .footer {
+    background-color: #9f025e;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    margin-top: 50px;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .company-info, .useful-links, .social-media, .contact-info {
+    flex: 1;
+    margin-bottom: 20px;
+  }
+  
+  .company-info h3, .useful-links h3, .social-media h3, .contact-info h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .company-info p {
+    font-size: 0.9rem;
+  }
+  
+  .useful-links ul, .social-media ul, .contact-info ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .useful-links ul li, .social-media ul li, .contact-info ul li {
+    margin-bottom: 5px;
+  }
+  
+  .useful-links a, .social-media a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .useful-links a:hover, .social-media a:hover {
+    color: #ff9800;
+  }
+  
+  

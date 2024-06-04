@@ -1,0 +1,34 @@
+<br>
+<h1>Create / Modifier Client</h1>
+<br>
+<form [formGroup]="form" (ngSubmit)="onsub()">
+  <mat-form-field style="width: 100%;">
+    <mat-label>Name</mat-label>
+    <input matInput placeholder="Name" formControlName="name" [value]="client?.name">
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%;">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="Email" formControlName="email" [value]="client?.email">
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%;">
+    <mat-label>Password</mat-label>
+    <input matInput placeholder="Password" formControlName="password" [value]="client?.password">
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%;">
+    <mat-label>Created Date</mat-label>
+    <input matInput [matDatepicker]="pickerDebut" placeholder="Created Date" formControlName="createdDate" [value]="client?.createdDate">
+    <mat-datepicker-toggle matSuffix [for]="pickerDebut"></mat-datepicker-toggle>
+    <mat-datepicker #pickerDebut></mat-datepicker>
+  </mat-form-field>
+
+  
+  <div fxLayout="row" fxLayoutGap="16px">
+    <button mat-raised-button type="submit" color="primary">Submit</button>
+    <button routerLink="/client" mat-raised-button color="warn">Retour</button> 
+   </div>
+  
+
+</form>

@@ -1,0 +1,38 @@
+<br>
+<h1>Réservez Votre salle maintenant !</h1>
+<br>
+
+<form [formGroup]="form" (ngSubmit)="onsub()">
+  <mat-form-field style="width: 100%;">
+    <mat-label>Date Début</mat-label>
+    <input matInput [matDatepicker]="pickerDebut" placeholder="Date Début" formControlName="dateDebut">
+    <mat-datepicker-toggle matSuffix [for]="pickerDebut"></mat-datepicker-toggle>
+    <mat-datepicker #pickerDebut></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%;">
+    <mat-label>Date Fin</mat-label>
+    <input matInput [matDatepicker]="pickerFin" placeholder="Date Fin" formControlName="dateFin">
+    <mat-datepicker-toggle matSuffix [for]="pickerFin"></mat-datepicker-toggle>
+    <mat-datepicker #pickerFin></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%;">
+    <mat-label>Client ID</mat-label>
+    <input matInput placeholder="Client ID" formControlName="clientId">
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%;">
+    <mat-label>Salle</mat-label>
+    <input matInput placeholder="Salle" [value]="getSalleName()" readonly>
+  </mat-form-field>
+  
+
+  <div fxLayout="row" fxLayoutGap="16px">
+    <button mat-raised-button type="submit" color="primary">Reservez</button>
+    <button routerLink="/" mat-raised-button color="warn">Retour à la page home</button> 
+    <button routerLink="/creation" mat-raised-button color="danger">Creer un compte</button> 
+  </div>
+  <br><br> 
+  <h4 style="color: rgb(234, 73, 73);">"Si vous n'avez pas d'identifiant.Vous devez créer un compte!"</h4>
+</form>

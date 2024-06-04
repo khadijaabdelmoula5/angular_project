@@ -1,0 +1,40 @@
+.mgCar{
+    margin-top: 30px;
+}
+.col1{
+    background-color: rgb(188, 107, 191);
+    margin-left: 50px;
+    height: 100px;
+    width: 175px;
+}
+
+.col2{
+    background-color:rgb(165, 78, 168);
+    margin-left: 50px;
+    height: 100px;
+    width: 175px;
+}
+
+.col3{
+    background-color:rgb(138, 81, 167);
+    margin-left: 50px;
+    height: 100px;
+    width: 175px;
+}
+
+
+
+.tailLine{
+    height: 300px;
+}
+.chart-wrapper {
+    height: px; /* Hauteur du graphique */
+    width: 400px; /* Largeur du graphique */
+    border-radius: 5px; /* Bord arrondi du graphique */
+  }
+  .canvas{
+    height: 400px; /* Hauteur du graphique */
+    width: 500px; /* Largeur du graphique */
+    border-radius: 5px; /* Bord arrondi du graphique */
+
+  }

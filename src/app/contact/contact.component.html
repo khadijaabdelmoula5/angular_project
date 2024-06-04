@@ -1,0 +1,49 @@
+<div class="content">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <h3 class="heading mb-4">Envoyez-nous un message !</h3>
+            <p>N'hésitez pas à nous contacter pour toute question ou demande.</p>
+              <p><img src="assets/Images/contact.png" alt="Image" class="img-fluid"></p>
+          </div>
+          <div class="col-md-6">
+            <form class="mb-5" (ngSubmit)="onSubmit()" [formGroup]="emailForm">
+              <div class="row">
+                <div class="col-md-12 form-group">
+                  <input type="text" class="form-control" formControlName="name" placeholder="Votre nom">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 form-group">
+                  <input type="email" class="form-control" formControlName="email" placeholder="Votre email">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 form-group">
+                  <input type="text" class="form-control" formControlName="objet" placeholder="Objet">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 form-group">
+                  <textarea class="form-control" formControlName="message" cols="30" rows="7" placeholder="Votre message"></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <input type="submit" value="Envoyer" class="btn btn-primary rounded-0 py-2 px-4">
+                  <span class="submitting"></span>
+                </div>
+              </div>
+            </form>
+            <div id="form-message-warning mt-4"></div>
+            <div id="form-message-success">
+              Votre message a été envoyé, merci !
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
